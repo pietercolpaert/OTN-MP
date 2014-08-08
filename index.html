@@ -23,7 +23,11 @@
           company: "Ghent University – iMinds",
           companyURL: "http://mmlab.be/",
         }],
-        edDraftURI: "http://pieter.pm/OTN-MP/"
+        edDraftURI: "http://pieter.pm/OTN-MP/",
+        localBiblio: {
+           "DCAT":"<cite><a href=\"http://www.w3.org/TR/vocab-dcat/\">Data Catalog Vocabulary (DCAT)</a>.</cite> Recommendation.",
+           "INSPIRE":"<cite><a href=\"http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32008R1205\">INSPIRE specification in EUR-LEX</a>.</cite>",
+        }
     };
   </script>
   <style>
@@ -35,7 +39,8 @@
 <body>
   <section id="abstract">
     <p>
-      This document describes how datasets can be annotated correctly within an Open Transport Net Hub.
+      This document describes how datasets can be annotated for use within an Open Transport Net Hub.
+      The specification is a [[DCAT]] profile: it adds additional constraints to [[DCAT]] and brings together the DCAT and [[INSPIRE]] vocabularies.
     </p>
   </section>
 
@@ -50,21 +55,21 @@
     <section>
       <h3>Scope and aim</h3>
       <p>
-       
+        
       </p>
 
-      <h3>DCAT profile</h3>
+      <h3>[[DCAT]] profile</h3>
       <p>
-        A <strong>DCAT profile</strong> is a specification for data catalogs that adds additional constraints to DCAT. A data catalog that conforms to the profile also conforms to DCAT. Additional constraints in a profile <em title="MAY" class="rfc2119">MAY</em> include:
+        A <strong>[[DCAT]] profile</strong> is a specification for data catalogs that adds additional constraints to [[DCAT]]. A data catalog that conforms to the profile also conforms to [[DCAT]]. Additional constraints in a profile <em title="MAY" class="rfc2119">MAY</em> include:
         <ul>
           <li> A minimum set of required metadata fields </li>
-          <li> Classes and properties for additional metadata fields not covered in DCAT</li>
+          <li> Classes and properties for additional metadata fields not covered in [[DCAT]]</li>
           <li> Controlled vocabularies or URI sets as acceptable values for properties</li>
           <li> Requirements for specific access mechanisms (RDF syntaxes, protocols) to the catalog's RDF description</li>
         </ul>
       </p>
       <p>
-        This vocabulary is a DCAT profile.
+        This vocabulary is a [[DCAT]] profile. 
       </p>
       
     </section>
@@ -72,9 +77,9 @@
 
   <section id="namespaces">
     <h2 id="ns">Namespaces</h2>
-    <p>The namespace for DCAT is <code>http://www.w3.org/ns/dcat#</code>. However,
-      it should be noted that DCAT makes extensive use of terms from other vocabularies,
-      in particular <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>. DCAT itself defines a minimal set of classes and
+    <p>The namespace for [[DCAT]] is <code>http://www.w3.org/ns/dcat#</code>. However,
+      it should be noted that [[DCAT]] makes extensive use of terms from other vocabularies,
+      in particular <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>. [[DCAT]] itself defines a minimal set of classes and
       properties of its own. A full set of namespaces and prefixes used in this
       document is shown in the table below.</p>
 
