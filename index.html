@@ -52,8 +52,47 @@
       <p>
        
       </p>
+
+      <h3>DCAT profile</h3>
+      <p>
+        A <strong>DCAT profile</strong> is a specification for data catalogs that adds additional constraints to DCAT. A data catalog that conforms to the profile also conforms to DCAT. Additional constraints in a profile <em title="MAY" class="rfc2119">MAY</em> include:
+        <ul>
+          <li> A minimum set of required metadata fields </li>
+          <li> Classes and properties for additional metadata fields not covered in DCAT</li>
+          <li> Controlled vocabularies or URI sets as acceptable values for properties</li>
+          <li> Requirements for specific access mechanisms (RDF syntaxes, protocols) to the catalog's RDF description</li>
+        </ul>
+      </p>
+      <p>
+        This vocabulary is a DCAT profile.
+      </p>
       
     </section>
   </section>
+
+  <section id="namespaces">
+    <h2 id="ns">Namespaces</h2>
+    <p>The namespace for DCAT is <code>http://www.w3.org/ns/dcat#</code>. However,
+      it should be noted that DCAT makes extensive use of terms from other vocabularies,
+      in particular <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>. DCAT itself defines a minimal set of classes and
+      properties of its own. A full set of namespaces and prefixes used in this
+      document is shown in the table below.</p>
+
+    <table id="namespaces">
+      <thead><tr><th>Prefix</th><th>Namespace</th></tr></thead>
+      <tbody>
+        <tr><td>dcat</td><td>http://www.w3.org/ns/dcat#</td></tr>
+        <tr><td>dct</td><td>http://purl.org/dc/terms/</td></tr>
+        <tr><td>dctype</td><td>http://purl.org/dc/dcmitype/</td></tr>
+        <tr><td>foaf</td><td>http://xmlns.com/foaf/0.1/</td></tr>
+        <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr>
+        <tr><td>rdfs</td><td>http://www.w3.org/2000/01/rdf-schema#</td></tr>
+        <tr><td>skos</td><td>http://www.w3.org/2004/02/skos/core#</td></tr>
+        <tr><td>vcard</td><td>http://www.w3.org/2006/vcard/ns#</td></tr>
+        <tr><td>xsd</td><td>http://www.w3.org/2001/XMLSchema#</td></tr>
+      </tbody>
+    </table>
+  </section>
+
 </body>
 </html>
