@@ -46,7 +46,7 @@
 
   <section id="sotd">
    <p>
-      To participate in the development of this specification, ...
+      To participate in the development of this specification, fork the <a href="https://github.com/pietercolpaert/OTN-MP/">repository</a>, make your changes and perform a pull request.
     </p>
   </section>
 
@@ -55,12 +55,15 @@
     <section>
       <h3>Scope and aim</h3>
       <p>
-        
+        An Open Transport Net Hub is a machine which provides a data harmonisation service on top of a given set of transport-datasets. The data is afterwards opened up again through Web-services and provided in graphical user interfaces towards end-users.
+      </p><p>
+        In order to be able to select the right datasets for a certain hub, the datasets <em title="MUST" class="rfc2119">MUST</em> be annotated using the Open Transport Net Metadata Profile (OTN-MP). Data owners can also choose to upload their dataset to a hub. The data owner will then have to fill out a form which 
       </p>
-
-      <h3>[[DCAT]] profile</h3>
+    </section>
+    <section>
+      <h3>DCAT profile</h3>
       <p>
-        A <strong>[[DCAT]] profile</strong> is a specification for data catalogs that adds additional constraints to [[DCAT]]. A data catalog that conforms to the profile also conforms to [[DCAT]]. Additional constraints in a profile <em title="MAY" class="rfc2119">MAY</em> include:
+        A <strong>DCAT profile</strong> is a specification for data catalogs that adds additional constraints to [[DCAT]]. A data catalog that conforms to the profile also conforms to [[DCAT]]. Additional constraints in a profile <em title="MAY" class="rfc2119">MAY</em> include:
         <ul>
           <li> A minimum set of required metadata fields </li>
           <li> Classes and properties for additional metadata fields not covered in [[DCAT]]</li>
@@ -68,24 +71,35 @@
           <li> Requirements for specific access mechanisms (RDF syntaxes, protocols) to the catalog's RDF description</li>
         </ul>
       </p>
+    </section>
+    <section>
+      <h3>INSPIRE meta-data</h3>
       <p>
-        This vocabulary is a [[DCAT]] profile. 
+        The [[INSPIRE]] specification is a meta-data standard for geospatial datasets. 
       </p>
-      
+    </section>
+    <section>
+      <h3>This document</h3>
+      <p>
+        After conformance notices, this document first lists the <a href="#namespaces">namespaces</a> used by this specification and the 
+      </p>
     </section>
   </section>
 
+  <section id="conformance"></section>
+
   <section id="namespaces">
     <h2 id="ns">Namespaces</h2>
-    <p>The namespace for [[DCAT]] is <code>http://www.w3.org/ns/dcat#</code>. However,
-      it should be noted that [[DCAT]] makes extensive use of terms from other vocabularies,
-      in particular <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>. [[DCAT]] itself defines a minimal set of classes and
-      properties of its own. A full set of namespaces and prefixes used in this
-      document is shown in the table below.</p>
+    <p>
+      The namespace for OTN-MP (otn:) is <code>http://semweb.mmlab.be/ns/otn-mp#</code>. However,
+      it should be noted that OTN-MP makes extensive use of terms from other vocabularies. 
+      A full set of namespaces and prefixes used in this document is shown in the table below.
+    </p>
 
     <table id="namespaces">
       <thead><tr><th>Prefix</th><th>Namespace</th></tr></thead>
       <tbody>
+        <tr><td>otn</td><td>http://semweb.mmlab.be/ns/otn-mp#</td></tr>
         <tr><td>dcat</td><td>http://www.w3.org/ns/dcat#</td></tr>
         <tr><td>dct</td><td>http://purl.org/dc/terms/</td></tr>
         <tr><td>dctype</td><td>http://purl.org/dc/dcmitype/</td></tr>
@@ -97,6 +111,61 @@
         <tr><td>xsd</td><td>http://www.w3.org/2001/XMLSchema#</td></tr>
       </tbody>
     </table>
+  </section>
+
+  <section id="otn" class="informative">
+    <h2>OTN-MP at a Glance</h2>
+
+    <section id="overview">
+      <h3>Overview</h3>
+      <p>The figure below illustrates the OTN-MP core vocabulary (the figure's intention is to show how OTN-MP is used rather than its precise
+        definition).</p>
+
+      <div class="illustration">
+        <p><img src="vocabulary.png" alt="The OTN-MP core vocabulary" /></p>
+        <p class="caption">The OTN-MP core vocabulary</p>
+      </div>
+
+      <p>An alphabetical index of the classes and properties of OTN-MP is
+        given below. All the terms are hyperlinked to their detailed description for quick reference.</p>
+      <p id="vocabulary-overview"></p>
+      
+    </section>
+
+    <section id="examples">
+      <h2>Examples</h2>
+      <p>
+        Below we have added an example description of a dataset in the city of antwerp in 2 serializations: [[turtle]] and CSV.
+      </p>
+      <pre class="example" title="A dataset in the city of Antwerp in text/turtle format">
+        &lt;http://datasets.antwerpen.be/v1/geografie/snelheid&gt; a dcat:Dataset ;
+              dct:title "Speed limits in Antwerp"@en ;
+              dct:category otn:speed ;
+              dcat:spatial "Antwerpen" .
+      </pre>
+      <pre class="example" title="A dataset in the city of Antwerp in text/csv format">
+        uri, title, category, spatial, boundingbox, spatial resolution, dcat:downloadURL, dcat:mediaType, dcat:license, dcat:contactPoint
+        &lt;http://datasets.antwerpen.be/v1/geografie/snelheid&gt;,"Speed limits in Antwerp", otn:speed, "Antwerpen",
+        &lt;http://datasets.antwerpen.be/v1/geografie/snelheid.json&gt;, application/json, &lt;http://opendata.antwerpen.be/gratis-open-data-licentie&gt;, me@antwerpen.be
+      </pre>
+    </section>
+    
+  </section>
+
+  <section id="categories">
+    <!--todo: make this automatic-->
+    <h2>Controlled vocabulary for categories</h2>
+    <h3>Speed</h3>
+    <p>Speed limits</p>
+    <div id="vocabulary-classes"></div>
+  </section>
+
+  <section>
+    <h2>Objects and properties</h2>
+    <p>
+      Objects and properties that <em title="MUST" class="rfc2119">must</em> be given.
+    </p>
+    <p>listing...</p>
   </section>
 
 </body>
