@@ -78,12 +78,6 @@
         The [[INSPIRE]] specification is a meta-data standard for geospatial datasets. 
       </p>
     </section>
-    <section>
-      <h3>This document</h3>
-      <p>
-        After conformance notices, this document first lists the <a href="#namespaces">namespaces</a> used by this specification and the 
-      </p>
-    </section>
   </section>
 
   <section id="conformance"></section>
@@ -122,7 +116,7 @@
         definition).</p>
 
       <div class="illustration">
-        <p><img src="vocabulary.png" alt="The OTN-MP core vocabulary" /></p>
+        <p><img src="OTN-MP.png" alt="The OTN-MP core vocabulary" /></p>
         <p class="caption">The OTN-MP core vocabulary</p>
       </div>
 
@@ -135,18 +129,20 @@
     <section id="examples">
       <h2>Examples</h2>
       <p>
-        Below we have added an example description of a dataset in the city of antwerp in 2 serializations: [[turtle]] and CSV.
+        Below we have added an example description of a dataset in the city of antwerp in the [[turtle]] RDF serialization.
       </p>
+      <pre class="example" title="A data catalog of the city of Antwerp in text/turtle format">
+        &lt;http://api.antwerpen.be/v1/TDTInfo/Resources&gt; a otn:Catalog ;
+              dct:title "The Open Data catalog of the city of Antwerp"@en ;
+              dcat:spatial &lt;http://sws.geonames.org/2803139/&gt; ;
+              dcat:dataset &lt;http://datasets.antwerpen.be/v1/geografie/snelheid&gt; .
+      </pre>
+
       <pre class="example" title="A dataset in the city of Antwerp in text/turtle format">
         &lt;http://datasets.antwerpen.be/v1/geografie/snelheid&gt; a dcat:Dataset ;
               dct:title "Speed limits in Antwerp"@en ;
-              dct:category otn:speed ;
-              dcat:spatial "Antwerpen" .
-      </pre>
-      <pre class="example" title="A dataset in the city of Antwerp in text/csv format">
-        uri, title, category, spatial, boundingbox, spatial resolution, dcat:downloadURL, dcat:mediaType, dcat:license, dcat:contactPoint
-        &lt;http://datasets.antwerpen.be/v1/geografie/snelheid&gt;,"Speed limits in Antwerp", otn:speed, "Antwerpen",
-        &lt;http://datasets.antwerpen.be/v1/geografie/snelheid.json&gt;, application/json, &lt;http://opendata.antwerpen.be/gratis-open-data-licentie&gt;, me@antwerpen.be
+              dcat:theme otn:speed ;
+              dct:spatial &lt;http://sws.geonames.org/2803139/&gt; .
       </pre>
     </section>
     
@@ -154,7 +150,7 @@
 
   <section id="categories">
     <!--todo: make this automatic-->
-    <h2>Controlled vocabulary for categories</h2>
+    <h2>Controlled vocabulary for Themes</h2>
     <h3>Speed</h3>
     <p>Speed limits</p>
     <div id="vocabulary-classes"></div>
