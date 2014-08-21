@@ -1,0 +1,18 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms:	<http://purl.org/dc/terms/> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix otn: <http://semweb.mmlab.be/ns/otn-mp#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+otn:Catalog rdfs:subClassOf dcat:Catalog ;
+            rdfs:comment "A class to indicate that this catalog supports the entire OTN Hub specification."@en .
+
+otn:ThemeTaxonomy a skos:ConceptScheme ;
+                  rdfs:comment "A list of themes which can be used to categorize OTN datasets."@en .
+
+otn:Speed skos:inScheme otn:ThemeTaxonomy ;
+          rdfs:label "Speed"@en ;
+          rdfs:comment "A category for everything related to speed limitations for vehicles on the road." .
+
