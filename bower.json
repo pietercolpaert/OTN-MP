@@ -1,0 +1,14 @@
+{
+  "name": "OTN-metadataprofile",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pietercolpaert/OTN-MP",
+  "authors": [
+    "Pieter Colpaert <pieter.colpaert@okfn.org>"
+  ],
+  "description": "A meta-data profile for the OTN project",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "n3js": "~0.2.7"
+  }
+}
