@@ -152,19 +152,44 @@
       
     </section>
 
-    <section id="categories">
-      <!--todo: make this automatic-->
-      <h2>Controlled vocabulary for Themes</h2>
-      <div id="vocabulary-classes"></div>
-    </section>
-
     <section>
       <h2>Objects and properties</h2>
       <p>
-        Objects and properties that <em title="MUST" class="rfc2119">must</em> be given.
+        This section lists objects and properties that <em title="MUST" class="rfc2119">must</em> or <em title="MAY" class="rfc2119">may</em> be given in an otn:Catalog in accordance with: [DCAT], [INSPIRE] or an ISO standard. Each time is mentioned which [DCAT] URI can be used and how to fill it out to also be in accordance with [INSPIRE].
       </p>
-      <p>listing...</p>
+      <section>
+        <h3><a href="http://semweb.mmlab.be/ns/otn-mp#Catalog">otn:Catalog</a></h3>
+        <p>otn:Catalog is a subclass of dcat:Catalog. It <em title="SHOULD" class="rfc2119">should</em> be given as an rdf:type to a dcat:Catalog that <em title="MUST" class="rfc2119">must</em> have all of the properties mentioned below.</p>
+
+        <section>
+          <h4><a href="http://purl.org/dc/terms/title">dct:title</a></h4>
+          <p>A dc terms title <em title="MUST" class="rfc2119">must</em> be given to the catalog to give a title which can be reused as part of a heading for user interfaces.</p>
+          <p>This title <em title="SHOULD" class="rfc2119">should</em> be available in all languages in the EU.</p>
+          <pre class="example" title="Titles which can be given to an OTN catalog">
+            &lt;http://api.antwerpen.be/v1/TDTInfo/Resources&gt; dct:title "Open Data Antwerp"@en ,
+                                                                     "Open Data Antwerpen"@nl .
+          </pre>
+        </section>
+
+      </section>
+
+      <section>
+        <h3><a href="#Catalog">dcat:Dataset</a></h3>
+        <p>All datasets <em title="MUST" class="rfc2119">must</em> be of the type dcat:Dataset.</p>
+
+        <section>
+          <h4><a href="http://purl.org/dc/terms/title">dct:title</a></h4>
+          <p>A dc terms title <em title="MUST" class="rfc2119">must</em> be given to the dataset to give a title which can be reused as part of a heading for user interfaces.</p>
+          <p>This title <em title="SHOULD" class="rfc2119">should</em> be available in all languages in the EU.</p>
+        </section>
+
+      </section>
     </section>
 
+    <section id="categories">
+      <h2>Controlled vocabulary for Themes</h2>
+      <p><a href="http://semweb.mmlab.be/ns/otn-mp#themeTaxonomy">The Open Transport Net Theme taxonomy</a> is a controlled vocabulary for themes</p>
+      <div id="vocabulary-classes"></div>
+    </section>
   </body>
 </html>

@@ -21,6 +21,7 @@ var addThemes = function () {
     var comment = N3Util.getLiteralValue(store.find(triple.subject,"http://www.w3.org/2000/01/rdf-schema#comment",null)[0].object);
     $("#vocabulary-classes").append("<section id='otn" +title + "'><h3><a href='" + triple.subject + "' target='_blank'>" + title + "</a></h3>");
     $("#vocabulary-classes").append("<p>" + comment + "</p>");
-    $("#vocabulary-classes").append("</section>");    
+    $("#vocabulary-classes").append("</section>");
   });
 }
+
