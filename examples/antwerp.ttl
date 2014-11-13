@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix otn: <http://semweb.mmlab.be/ns/otn-mp#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+<http://datasets.antwerpen.be/v4/api/dcat> a dcat:Catalog ;
+                                           dct:title "The Open Data catalog of the city of Antwerp"@en ;
+                                           dct:description "Find all the datasets of the city of Antwerp. This is a demo to illustrate how the feed can be implemented."@en ;
+                                           foaf:homepage <http://opendata.antwerpen.be> ;
+                                           dct:publisher [ foaf:name "City of Antwerp"@en ; foaf:homepage <http://antwerpen.be> ];
+                                           dct:language "nl" ;
+                                           dct:issued "2014-07-22" ;
+                                           dct:modified "2014-07-24" ;
+                                           dct:right "© city of Antwerp, some rights reserver"@en ;
+                                           dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+                                           dcat:spatial <http://sws.geonames.org/2803139/> ;
+                                           dcat:dataset <http://datasets.antwerpen.be/v1/geografie/snelheid>.
+
+<http://datasets.antwerpen.be/v1/geografie/snelheid> a dcat:Dataset ;
+                                                     dct:title "Speed limits in Antwerp"@en ;
+                                                     dct:title "Snelheidsbeperkingen in Antwerpen"@nl ;
+                                                     dct:description "Deze dataset geeft een overzicht van de toegelaten snelheid per wegsegment."@nl ;
+                                                     dct:description "A list of speed limits in Antwerp per road segment"@en ;
+                                                     dct:spatial <http://sws.geonames.org/2803139/> ;
+                                                     dcat:distribution <http://datasets.antwerpen.be/v1/geografie/snelheid.json> .
+
+<http://datasets.antwerpen.be/v1/geografie/snelheid.json> a dcat:Distribution ;
+                                                          dct:title "Speeds in JSON format"@en ;
+                                                          dct:description "The JSON format is a direct conversion from a GEO format at the city of Antwerp"@en ;
+                                                          dcat:mediaType "application/json"@en ;
+                                                          dct:issued "2014-07-22" ;
+                                                          dct:modified "2014-07-24" ;
+                                                          dct:rights "© City of Antwerp"@en ;
+                                                          dct:license <http://opendata.antwerpen.be/gratis-open-data-licentie> ;
+                                                          dcat:downloadURL <http://datasets.antwerpen.be/v1/geografie/snelheid.json> .

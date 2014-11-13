@@ -121,7 +121,7 @@
 
         <div class="illustration">
           <p><img src="OTN-MP.png" alt="The OTN-MP core vocabulary" /></p>
-          <p class="caption">The OTN-MP core vocabulary</p>
+          <p class="caption">The OTN-MP core vocabulary. In black: mandatory, in gray: optional.</p>
         </div>
 
         <p>An alphabetical index of the classes and properties of OTN-MP is
@@ -136,17 +136,7 @@
           Below we have added an example description of a dataset in the city of antwerp in the [[turtle]] RDF serialization.
         </p>
         <pre class="example" title="A data catalog of the city of Antwerp in text/turtle format">
-          &lt;http://api.antwerpen.be/v1/TDTInfo/Resources&gt; a otn:Catalog ;
-          dct:title "The Open Data catalog of the city of Antwerp"@en ;
-          dcat:spatial &lt;http://sws.geonames.org/2803139/&gt; ;
-          dcat:dataset &lt;http://datasets.antwerpen.be/v1/geografie/snelheid&gt; .
-        </pre>
-
-        <pre class="example" title="A dataset in the city of Antwerp in text/turtle format">
-          &lt;http://datasets.antwerpen.be/v1/geografie/snelheid&gt; a dcat:Dataset ;
-          dct:title "Speed limits in Antwerp"@en ;
-          dcat:theme otn:speed ;
-          dct:spatial &lt;http://sws.geonames.org/2803139/&gt; .
+          Check the example in <a href="examples/antwerp.ttl">this turtle file</a>
         </pre>
       </section>
       
@@ -158,17 +148,11 @@
         This section lists objects and properties that <em title="MUST" class="rfc2119">must</em> or <em title="MAY" class="rfc2119">may</em> be given in an otn:Catalog in accordance with: [DCAT], [INSPIRE] or an ISO standard. Each time is mentioned which [DCAT] URI can be used and how to fill it out to also be in accordance with [INSPIRE].
       </p>
       <section>
-        <h3><a href="http://semweb.mmlab.be/ns/otn-mp#Catalog">otn:Catalog</a></h3>
-        <p>otn:Catalog is a subclass of dcat:Catalog. It <em title="SHOULD" class="rfc2119">should</em> be given as an rdf:type to a dcat:Catalog that <em title="MUST" class="rfc2119">must</em> have all of the properties mentioned below.</p>
-
+        <h3>dcat:Catalog</h3>
         <section>
           <h4><a href="http://purl.org/dc/terms/title">dct:title</a></h4>
           <p>A dc terms title <em title="MUST" class="rfc2119">must</em> be given to the catalog to give a title which can be reused as part of a heading for user interfaces.</p>
           <p>This title <em title="SHOULD" class="rfc2119">should</em> be available in all languages in the EU.</p>
-          <pre class="example" title="Titles which can be given to an OTN catalog">
-            &lt;http://api.antwerpen.be/v1/TDTInfo/Resources&gt; dct:title "Open Data Antwerp"@en ,
-                                                                     "Open Data Antwerpen"@nl .
-          </pre>
         </section>
 
       </section>

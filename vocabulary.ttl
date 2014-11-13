@@ -5,16 +5,22 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix otn: <http://semweb.mmlab.be/ns/otn-mp#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-
-otn:Catalog rdfs:subClassOf dcat:Catalog ;
-            rdfs:label "Catalog" ;
-            rdfs:comment "A class to indicate that this catalog supports the entire OTN Hub specification."@en .
+@prefix status: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
 otn:ThemeTaxonomy a skos:ConceptScheme ;
-                  rdfs:label "Theme Taxonomy" ;
-                  rdfs:comment "A list of themes which can be used to categorize OTN datasets."@en .
+                  status:term_status "unstable"@en ;
+                  rdfs:label "Theme Taxonomy"@en ;
+                  rdfs:comment "A list of themes which can be used to categorize datasets."@en .
 
-otn:Speed skos:inScheme otn:ThemeTaxonomy ;
-          rdfs:label "Speed"@en ;
-          rdfs:comment "A category for everything related to speed limitations for vehicles on the road."@en .
+otn:useFor a rdf:Property ;
+           status:term_status "unstable"@en ;
+           rdfs:label "Use for"@en ;
+           rdfs:comment "Use this predicate to link a distribution to an intended use"@en ;
+           rdfs:domain dcat:Distribution .
 
+otn:UseTaxonomy a skos:ConceptScheme ;
+                status:term_status "unstable"@en ;
+                rdfs:label "Intended Use Taxonomy"@en ;
+                rdfs:comment "A list of intended uses which can be used to categorize distributions."@en .
+
+# Todo: make a list of themes and intended uses
