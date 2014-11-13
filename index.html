@@ -154,25 +154,77 @@
           <p>A dc terms title <em title="MUST" class="rfc2119">must</em> be given to the catalog to give a title which can be reused as part of a heading for user interfaces.</p>
           <p>This title <em title="SHOULD" class="rfc2119">should</em> be available in all languages in the EU.</p>
         </section>
+        <section>
+          Other properties that <em title="MUST" class="rfc2119">must</em> be included:
+          <ul>
+            <li>dct:description
+            <li>foaf:homepage
+            <li>dct:issued
+            <li>dct:language
+            <li>dct:modified
+            <li>dct:rights
+            <li>dct:license
+            <li>dct:spatial
+            <li>dct:publisher
+          </ul>
+        </section>
 
       </section>
 
       <section>
         <h3><a href="#Catalog">dcat:Dataset</a></h3>
         <p>All datasets <em title="MUST" class="rfc2119">must</em> be of the type dcat:Dataset.</p>
-
         <section>
-          <h4><a href="http://purl.org/dc/terms/title">dct:title</a></h4>
-          <p>A dc terms title <em title="MUST" class="rfc2119">must</em> be given to the dataset to give a title which can be reused as part of a heading for user interfaces.</p>
+          <p>A <a href="http://purl.org/dc/terms/title">dct:title</a> <em title="MUST" class="rfc2119">must</em> be given to the dataset to give a title which can be reused as part of a heading for user interfaces.</p>
           <p>This title <em title="SHOULD" class="rfc2119">should</em> be available in all languages in the EU.</p>
         </section>
+        <section>
+          Other properties that <em title="MUST" class="rfc2119">must</em> be included:
+          <ul>
+            <li>dct:description
+            <li>dct:issued
+            <li>dct:modified
+            <li>dct:spatial
+            <li>dct:publisher
+          </ul>
+        </section>
+      </section>
 
+      <section>
+        <h3><a href="#Catalog">dcat:Distribution</a></h3>
+        <p>All distributions <em title="MUST" class="rfc2119">must</em> be of the type dcat:Distribution.</p>
+
+        <section>
+          <p>A <a href="http://purl.org/dc/terms/title">dct:title</a> <em title="MUST" class="rfc2119">must</em> be given to the distribution to give a title which can be reused as part of a heading for user interfaces.</p>
+          <p>This title <em title="SHOULD" class="rfc2119">should</em> be available in all languages in the EU.</p>
+        </section>
+        <section>
+          Other properties that <em title="MUST" class="rfc2119">must</em> be included:
+          <ul>
+            <li>dct:description
+            <li>dct:issued
+            <li>dct:modified
+            <li>dct:license
+            <li>dct:rights
+            <li>dcat:downloadURL
+            <li>dcat:mediaType
+          </ul>
+        </section>
       </section>
     </section>
 
     <section id="categories">
       <h2>Controlled vocabulary for Themes</h2>
       <p><a href="http://semweb.mmlab.be/ns/otn-mp#themeTaxonomy">The Open Transport Net Theme taxonomy</a> is a controlled vocabulary for themes</p>
+      <p>The theme taxonomy <em title="MAY" class="rfc2119">may</em> be used to put a dataset in a certain theme. A dataset can have 1 or more themes.</p>
+      <div id="vocabulary-classes"></div>
+    </section>
+
+
+    <section id="intendeduse">
+      <h2>Intended use</h2>
+      <p><a href="http://semweb.mmlab.be/ns/otn-mp#useTaxonomy">The Open Transport Net intended use taxonomy</a> is a controlled vocabulary for describing the intended use of a dcat:Distribution.</p>
+      <p>The intended use taxonomy <em title="MAY" class="rfc2119">may</em> be used to put a distribution in a certain category. The taxonomy is a fixed list of  which cannot be altered unless it's altered in this specification. A distribution can have 1 or more distributions.</p>
       <div id="vocabulary-classes"></div>
     </section>
   </body>

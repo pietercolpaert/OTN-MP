@@ -13,7 +13,7 @@
                                            dct:language "nl" ;
                                            dct:issued "2014-07-22" ;
                                            dct:modified "2014-07-24" ;
-                                           dct:right "© city of Antwerp, some rights reserver"@en ;
+                                           dct:right "© City of Antwerp, some rights reserved"@en ;
                                            dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
                                            dcat:spatial <http://sws.geonames.org/2803139/> ;
                                            dcat:dataset <http://datasets.antwerpen.be/v1/geografie/snelheid>.
