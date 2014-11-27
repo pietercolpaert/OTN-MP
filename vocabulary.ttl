@@ -11,7 +11,7 @@
 otn:Ontology a owl:Ontology ;
              rdfs:label "The Open Transport Net Meta-data Profile"@en ;
              rdfs:comment "A profile of DCAT to describe datasets within an Open Transport Net (OTN) Hub"@en ;
-             dct:creator [ foaf:name "Pieter Colpaert"; ] .
+             dcterms:creator [ foaf:name "Pieter Colpaert"; ] .
             
 otn:ThemeTaxonomy a skos:ConceptScheme ;
                   status:term_status "unstable"@en ;
