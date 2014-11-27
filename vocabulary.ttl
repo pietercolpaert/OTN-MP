@@ -7,20 +7,25 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix status: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
+otn:Ontology a owl:Ontology ;
+             rdfs:label "The Open Transport Net Meta-data Profile"@en ;
+             rdfs:comment "A profile of DCAT to describe datasets within an Open Transport Net (OTN) Hub"@en ;
+             dct:creator [ foaf:name "Pieter Colpaert"; ] .
+            
 otn:ThemeTaxonomy a skos:ConceptScheme ;
                   status:term_status "unstable"@en ;
                   rdfs:label "Theme Taxonomy"@en ;
                   rdfs:comment "A list of themes which can be used to categorize datasets."@en .
 
-otn:useFor a rdf:Property ;
-           status:term_status "unstable"@en ;
-           rdfs:label "Use for"@en ;
-           rdfs:comment "Use this predicate to link a distribution to an intended use"@en ;
-           rdfs:domain dcat:Distribution .
+otn:exampleUse a rdf:Property ;
+               status:term_status "unstable"@en ;
+               rdfs:label "Example use"@en ;
+               rdfs:comment "Use this predicate to link a distribution to an example use"@en ;
+               rdfs:domain dcat:Distribution .
 
 otn:UseTaxonomy a skos:ConceptScheme ;
                 status:term_status "unstable"@en ;
-                rdfs:label "Intended Use Taxonomy"@en ;
-                rdfs:comment "A list of intended uses which can be used to categorize distributions."@en .
+                rdfs:label "Example Use Taxonomy"@en ;
+                rdfs:comment "A list of examples uses which can be used to categorize distributions."@en .
 
-# Todo: make a list of themes and intended uses
+# Todo: make a list of themes and example uses
